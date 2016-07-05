@@ -1,0 +1,33 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit; 
+}
+
+/*Outer Border Sizing*/
+
+.outerBorder {
+	border: 2px black solid;
+	width: 50em;
+	margin: 5em auto;
+	background:#ACA498;
+
+}
+
+.col-1 {
+	width: 30%;
+	margin: 0 auto;
+	display: inline-block;
+	color:#3CF800;
+}
+.col-2 {
+	width: 60%;
+	height: 264px;
+	margin: 0 auto;	
+	display: inline-block;
+	float: right;
+	color:#3CF800;
+	border: 2px black solid;
+}
