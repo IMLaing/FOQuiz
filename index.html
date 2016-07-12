@@ -1,53 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>FO Quiz</title>
-		<link rel="stylesheet" href="css/style.css">
-	</head>
-<body>
-	<section>
-		<div class="outerBorder">
-			<div class="col-1">
-				<div class="scoreboard">
-					<div class="playerScorebox">
-						<h2>Score:</h2>
-						<p id="displayPlayerScore"><!--innerHTML--></p> 					
-					</div>
-					<div class="questionRemaining">
-						<h2>Questions Remaining:</h2>
-						<p id="displayQuestionRemaing"><!--innherHTML--></p>
-					</div>
-				</div>
-
-	<!--Will probably want this to be created in JS-->
-				<div class="answerSelection">
-					<form>
-						<input type='radio' name='answer' value='one'>Answer Me<br>
-						<input type='radio' name='answer' value='two'>Or Me<br>
-						<input type='radio' name='answer' value='three'> Not ME<br>
-						<input type='radio' name='answer' value='four'>Or <br>
-						<input type='radio' name='answer' value='five'>  ME<br>
-					</form>
-				</div>
-			</div>
-
-	<!--Question Column-->
-			<div class="col-2">
-				<div class="questionBox"><h1>QUESTIONS</h1></div>
-				<div class="feedbackBox"><h1>FEEDBACK</h1></div>
-			</div>
-	<!-- Restart Button -->
-			<div class='restartButton'>
-				<p> ABORT! <p>
-			</div>
-				
-		</div>
-
+	<meta charset="UTF-8">
+	<title>FO Quiz</title>
+	<link type='text/css' href='css/style.css' rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"> </script>
+	<script type="text/javascript" src="js/script.js"></script>
 	
+	
+</head>
+<body>
+	<div class='currentQuestionNumber'></div>
+<button id="reset">Try Again </button>
+<section>
+  <h1>Fallout Universe Quiz Draft 1</h1>
+  <div class="questionViewer">
+    <!--Where content should go-->
 
-	</section>
+  </div>
+
+
+</section>
 </body>
 </html>
