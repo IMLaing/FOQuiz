@@ -1,34 +1,41 @@
-	var questionList = [{
+	var questionList = [
+	new Question({
 	  question: "What technological invention was never created in the Fallout universe in 1947?",
 	  options: ["Transistor Effect", "Soviet Gas-operated Rifle", "Quantum Mechanics", "The Clavioline", "Instant Camera"],
 	  answer: 0,
 	  feedback: "The transistor's lack of creation lead to no miniaturization of electronics."
-	}, {
+	}), 
+	new Question({
 	  question: "How many commonwealths were created in 1969 Fallout Universe?",
 	  options: [23, 42, 13, 16, 8],
 	  answer: 2,
 	  feedback: "The United States of America were divided in to 13 colonies."
-	}, {
+	}), 
+	new Question({
 	  question: "What real life concept car was used as a model for one of the many Fallout Universe cars?",
 	  options: ["Aurora Safety Car", "Ford Nucleon", "Phantom Corsair", "Bisiluro Damolnar", "Ferrari 250 Shooting Brake"],
 	  answer: 1,
 	  feedback: "The Ford Nucleon can be seen in ruins throughout the wastelands"
-	}, {
+	}), 
+	new Question({
 	  question: "What is the code name for the Government's Vault project?",
 	  options: ["Project Enduring Freedom", "Project Bunker", "Project Safehouse", "Project Eden", "Project Dwarf Fortress"],
 	  answer: 2,
 	  feedback: "Vault-Tec would later use the vaults as human experimentation chambers."
-	}, {
+	}), 
+	new Question({
 	  question: "Which Charcter has made the most apperances in the Fallout game series?",
 	  options: ["Ian", "Harold", "Tandi", "Dogmeat", "Robert House"],
 	  answer: 1,
 	  feedback: "Being the tree/ghoul that he is, Harold has an incredibly long life span."
-	}, ];
-	
-  var currentQuestion = 0;
-	var numberCorrect = 0;
+	}) ];
 
-	$(document).ready(function() {
+	var game = new Game({
+		questions: questionList
+	});
+console.log(game.questions);
+/*
+ 	$(document).ready(function() {
 	  var Game = {
 	    nextQuestion: function() {
 	      console.log('next question triggered');
@@ -109,3 +116,5 @@
 	  Game.currentQuestionSet();
 
 	});
+
+	*/
