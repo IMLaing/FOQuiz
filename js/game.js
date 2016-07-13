@@ -4,7 +4,6 @@ var Game = function(data){
 	this.score = 0;
 };
 
-
 	// 'this' refers to the object that is created by the Game constructor
 Game.prototype.show = function(){
 	// get current question 
@@ -12,5 +11,9 @@ Game.prototype.show = function(){
 	// display current question
 	question.show();
 	//display current score
-
+	this.showScore();
+};
+	//changing the DOM from within the object- objects wrap logic in to meaningful keywords
+Game.prototype.showScore = function(){
+	$('.currentQuestionNumber').html('<p> Question Number ' + (this.currentQuestion + 1) + ' of 5</p>');
 };

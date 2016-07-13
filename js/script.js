@@ -34,7 +34,11 @@
 		questions: questionList
 	});
 console.log(game.questions);
-/*
+$(document).ready(function(){
+	game.show();
+});
+
+
  	$(document).ready(function() {
 	  var Game = {
 	    nextQuestion: function() {
@@ -60,7 +64,6 @@ console.log(game.questions);
 	      }
 	    },
 	    updateAnswers: $('.questionViewer').on("click", "#submit", function() {
-	      console.log('clicked');
 	      var answer = $('input[type="radio"]:checked').val();
 	      if (answer == questionList[currentQuestion].answer) {
 	        numberCorrect++;
@@ -112,6 +115,7 @@ console.log(game.questions);
 	      console.log('add questions');
 	    })
 	  };
+	 
 	  Game.nextQuestion();
 	  Game.currentQuestionSet();
 
