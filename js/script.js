@@ -37,11 +37,21 @@ $(document).ready(function(){
 	game.show();
 	console.log('game.show() ran');
 
-$('.questionViewer').on("click", "#submit", function() {
-	game.setAnswer();
+	$('.questionViewer').on("click", "#submit", function() {
+		game.setAnswer();
+	});
+
+	$('#reset').on("click", function() {
+		console.log('reset clicked');
+		game = new Game({questions: questionList});
+		game.show();
 	});
 	
+		
 });
+
+
+
 
 	console.log('the console.log directly prior to the submit function ran');
 

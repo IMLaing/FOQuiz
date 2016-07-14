@@ -17,7 +17,9 @@ Game.prototype.show = function(){
 };
 //changing the DOM from within the object- objects wrap logic in to meaningful keywords
 Game.prototype.showScore = function(){
-	$('.currentQuestionNumber').html('<p> Question Number ' + (this.currentQuestion + 1) + ' of 5</p>');
+	var html = '<p> Question Number ' + (this.currentQuestion + 1) + ' of 5</p>';
+	html += '<p> Score ' + (this.score) + ' of 5</p>';
+	$('.currentQuestionNumber').html(html);
 };
 
 Game.prototype.setAnswer = function(){
@@ -25,7 +27,7 @@ Game.prototype.setAnswer = function(){
 	// the variable question is taking the data from the game constructor which includes the new Question objects from the questionList
 	var question = this.questions[this.currentQuestion];
 	var answer = $('input[type="radio"]:checked').val();
-	console.log(answer + 'this is what the val is');
+	console.log(answer + ' this is what the val is');
 	console.log( question.answer);
 	if (answer ==  question.answer) {
 		this.score++;
@@ -34,16 +36,18 @@ Game.prototype.setAnswer = function(){
 		console.log('wrong');
 
 	}
+	
 	this.next();	
 };
 
 Game.prototype.next = function(){
-	this.currentQuestion++;
-	if ( this.currentQuestion < this.questions.length){
+	this.showScore();
+	if ( this.currentQuestion < this.questions.length - 1){
+		this.currentQuestion++;
 		question = this.questions[this.currentQuestion];
 		console.log(this.currentQuestion);
 		question.show(); 
-	} else {
-		alert ('No More Questions');
+	} else{
+		alert (' no more questions!');
 	}
 };
