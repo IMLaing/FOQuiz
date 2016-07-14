@@ -6,7 +6,8 @@ h1 {
   margin: 1.375em 0; 
 }
 
-input {
+label {
   margin: 1em 0;
+  display: block;
 }
 

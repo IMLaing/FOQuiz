@@ -30,16 +30,24 @@
 	  feedback: "Being the tree/ghoul that he is, Harold has an incredibly long life span."
 	}) ];
 
-	var game = new Game({
-		questions: questionList
-	});
+	var game = new Game({questions: questionList});
+
 console.log(game.questions);
 $(document).ready(function(){
 	game.show();
+	console.log('game.show() ran');
+
+$('.questionViewer').on("click", "#submit", function() {
+	game.setAnswer();
+	});
+	
 });
 
+	console.log('the console.log directly prior to the submit function ran');
 
- 	$(document).ready(function() {
+
+
+/* 	$(document).ready(function() {
 	  var Game = {
 	    nextQuestion: function() {
 	      console.log('next question triggered');
@@ -84,7 +92,7 @@ $(document).ready(function(){
 	        $('.currentQuestionNumber').append('<p> ' + numberCorrect + ' of 5 correct!</p>');
 	      } else {
 	        $('.currentQuestionNumber').children().remove();
-	        $('.currentQuestionNumber').append('<h1> Your final score is ' + numberCorrect + ' out of 5!</h1>')
+	        $('.currentQuestionNumber').append('<h1> Your final score is ' + numberCorrect + ' out of 5!</h1>');
 	      }
 
 	    },

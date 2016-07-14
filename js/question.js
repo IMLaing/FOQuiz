@@ -13,3 +13,5 @@ Question.prototype.show = function(){
 	html += '<input type="button" id="submit" value="Submit Answer">';
 	$(".questionViewer").html(html);
 };
+
+
