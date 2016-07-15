@@ -3,6 +3,7 @@ var Game = function(data){
 	this.questions = data.questions;
 	this.currentQuestion = 0;	
 	this.score = 0;
+	this.correct = '';
 };
 
 // 'this' refers to the object that is created by the Game constructor
@@ -22,6 +23,11 @@ Game.prototype.showScore = function(){
 	$('.currentQuestionNumber').html(html);
 };
 
+Game.prototype.showFeedback = function(){
+	var question = this.questions[this.currentQuestion];
+	$('.feedbackViewer').html('<p>' + this.correct + ' ' + question.feedback + '</p>');
+};
+
 Game.prototype.setAnswer = function(){
 	console.log('clicked #submit');
 	// the variable question is taking the data from the game constructor which includes the new Question objects from the questionList
@@ -31,9 +37,11 @@ Game.prototype.setAnswer = function(){
 	console.log( question.answer);
 	if (answer ==  question.answer) {
 		this.score++;
+		this.correct = 'That is correct!';
 		console.log('correct! You have answered ' + this.score + ' questions correctly');
 	} else {
 		console.log('wrong');
+		this.correct = "That is not correct.";
 
 	}
 	
@@ -42,12 +50,15 @@ Game.prototype.setAnswer = function(){
 
 Game.prototype.next = function(){
 	this.showScore();
+	this.showFeedback();
 	if ( this.currentQuestion < this.questions.length - 1){
 		this.currentQuestion++;
 		question = this.questions[this.currentQuestion];
 		console.log(this.currentQuestion);
 		question.show(); 
 	} else{
-		alert (' no more questions!');
-	}
+		//create a modal that displays all of the information
+		var finalFeedback = this.score;
+		$('.feedbackViewer').html('<h1> You completed the quiz with ' + finalFeedback + ' correct answers!</h1>');
+		}
 };
