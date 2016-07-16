@@ -45,6 +45,7 @@ $(document).ready(function(){
 		console.log('reset clicked');
 		game = new Game({questions: questionList});
 		game.show();
+		$('.feedbackViewer').html('');
 	});
 	
 		

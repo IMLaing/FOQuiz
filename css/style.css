@@ -1,13 +1,67 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
+
+body {
+	font-family: 'Source Code Pro', monospace ;
+	background-color: #6b6369;
+background-image: url("https://www.transparenttextures.com/patterns/classy-fabric.png");
+color: #1AFF1E;
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
 section {
+
 width: 50em;
 margin: 0 auto;
+
 }
+
 h1 {
   margin: 1.375em 0; 
+  font-size: 2em;
+
 }
 
 label {
   margin: 1em 0;
   display: block;
+
+}
+
+.questionViewer {
+	background: #010301;
+	border-radius: 25px;
+	padding: 15px;
+	box-shadow: inset 0 0 50px darkgrey, 0 0 5px black;
+	color: #1AFF1E;
+
+}
+.monitor {
+	box-shadow: inset 0 0 50px black, 0 0 5px black;
+	border-radius: 25px;
+	padding: 10px 10px;
+	}
+
+.currentQuestionNumber {
+	padding: 10px;
+	border-radius: 25px;
+	box-shadow: inset 0 0 50px darkgrey, 0 0 5px black;
+	color: #1AFF1E;
+	float: right;
+	background-color: black;
+	}
+
+#reset {
+	padding: 20px;
+	border-radius: 25px;
+	background: #010301;
+	color: #1AFF1E;
+	font-weight: 900;
+}
+
+#submit {
+	padding: 20px;
+	border-radius: 25px;
+	background: #010301;
+	color: #1AFF1E;
+	font-weight: 900;
 }
 
